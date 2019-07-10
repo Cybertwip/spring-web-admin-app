@@ -1,0 +1,34 @@
+<!--<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="'Hello, ' + ${name} + '!'" />
+</body>
+</html> -->
+
+<!DOCTYPE html>
+
+<html
+        lang="en"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{commons/layout}">
+<head>
+    <meta charset="UTF-8" />
+    <title>Wolf</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <p th:text="'Hello World!'" >Hello World!</p>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-success">This is a success button</button>
+        <button type="button" class="btn btn-warning">This is a warning button</button>
+        <button type="button" class="btn btn-danger">This is a danger button</button>
+    </div>
+</div>
+</body>
+</html>

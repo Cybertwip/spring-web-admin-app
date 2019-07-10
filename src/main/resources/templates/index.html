@@ -1,0 +1,45 @@
+<!--<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="'Hello, ' + ${name} + '!'" />
+</body>
+</html> -->
+
+<!DOCTYPE html>
+
+<html
+        lang="en"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{commons/layout}">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="jumbotron">
+        <h1 class="display-3">Welcome!</h1>
+        <p class="lead">This is a sample web application showcasing the CRUD operations that can be done against a simple express server.</p>
+        <hr class="my-2" />
+        <p>It makes use of the Java Spring Framework and Postgres as a backend database.</p>
+        <hr class="my-2" />
+        <p>Fully accessible from GitHub.</p>
+        <p class="lead">
+            <button type="button" class="btn btn-primary btn-lg" onclick="openGitHub()">Start coding!</button>
+        </p>
+    </div>
+
+<script type="text/javascript">
+    function openGitHub() {
+        const url = "https://github.com/VictorJL/react-web-admin-app";
+        window.open(url, '_blank');
+    }
+</script>
+</div>
+</body>
+</html>
