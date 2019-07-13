@@ -18,17 +18,28 @@
         layout:decorate="~{commons/layout}">
 <head>
     <meta charset="UTF-8" />
-    <title>Wolf</title>
+    <title>Home</title>
 </head>
 <body>
 <div layout:fragment="content">
-    <p th:text="'Hello World!'" >Hello World!</p>
-
-    <div class="btn-group">
-        <button type="button" class="btn btn-success">This is a success button</button>
-        <button type="button" class="btn btn-warning">This is a warning button</button>
-        <button type="button" class="btn btn-danger">This is a danger button</button>
+    <div class="jumbotron">
+        <h1 class="display-3">Welcome!</h1>
+        <p class="lead">This is a web application showing CRUD operations that can be done with a GraphQL server.</p>
+        <hr class="my-2" />
+        <p>It makes use of the Java Spring Framework and Postgres as a backend database.</p>
+        <hr class="my-2" />
+        <p>Fully accessible from GitHub.</p>
+        <p class="lead">
+            <button type="button" class="btn btn-primary" onclick="openGitHub()">Start coding!</button>
+        </p>
     </div>
+
+<script type="text/javascript">
+    function openGitHub() {
+        const url = "https://github.com/VictorJL/react-web-admin-app";
+        window.open(url, '_blank');
+    }
+</script>
 </div>
 </body>
 </html>
